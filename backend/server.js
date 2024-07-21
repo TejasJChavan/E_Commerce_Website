@@ -3,6 +3,7 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import pg from "pg";
 import bcrypt from "bcrypt";
+import 'dotenv/config';
 
 const port = 8080;
 const saltRounds = 10;
@@ -10,11 +11,11 @@ const server = express();
 server.use(cors());
 
 const db = new pg.Client({
-  database: "vendora",
-  host: "localhost",
-  user: "postgres",
-  password: "tEj@ 5",
-  port: 5432,
+  database: process.env.PG_DATABASE,
+  host: process.env.PG_HOST,
+  user: process.env.PG_USER,
+  password: process.env.PG_PASSWORD,
+  port: process.env.PG_PORT,
 });
 db.connect();
 

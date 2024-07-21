@@ -1,12 +1,13 @@
 import React, { useState, useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { UserContext } from "../App.jsx";
 import Navbar from "./Navbar";
 
 function Login() {
   const navigate = useNavigate();
-  const {setLogin} = useContext(UserContext);
-  const [error, setError] = useState("");
+  const location = useLocation();
+  const { setLogin } = useContext(UserContext);
+  const [error, setError] = useState(location.state?.error || "");
   const [user, setUser] = useState({
     email: "",
     password: "",
@@ -32,7 +33,7 @@ function Login() {
           setError(data.error);
         } else if (response.status === 201) {
           setLogin(true);
-          navigate("/");
+          navigate("/cart");
         } else {
           setError("An unexpected error occurred. Please try again later.");
         }
@@ -51,6 +52,7 @@ function Login() {
       };
     });
   }
+
   return (
     <>
       <Navbar />

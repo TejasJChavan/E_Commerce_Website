@@ -44,11 +44,12 @@ function Navbar() {
           className="lg:opacity-100 transition-all ease-in duration-500 opacity-0 top-[-400px] lg:h-10 lg:flex lg:items-center lg:static absolute bg-5 w-full lg:w-auto z-[-1] lg:z-auto left-0 lg:py-0 py-2 lg:pl-0 pl-4"
         >
           <li className="h-full flex text-1 items-center gap-4 cursor-pointer hover:scale-[1.02] transition-all ease-in-out">
+            <a href="/cart" className="h-full">
             <img
-              src="assets/cart-50.png"
-              alt="shopping-cart"
-              className="max-h-full mx-3 lg:py-0 py-4"
-            />
+            src="assets/cart-50.png"
+            alt="shopping-cart"
+            className="max-h-full mx-3 lg:py-0 py-4"
+          /></a>
             <span className="lg:hidden">Cart</span>
           </li>
           <li className="h-full flex text-1 items-center gap-4 cursor-pointer hover:scale-[1.02] transition-all ease-in-out">
