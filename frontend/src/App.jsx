@@ -8,10 +8,15 @@ import Cart from "./components/Cart.jsx";
 export const UserContext = createContext(null);
 
 function App() {
-  const [isLoggedIn, setLogin] = useState(false);
+  // Initialize the login state from local storage
+  const [isLoggedIn, setLogin] = useState(() => {
+    return localStorage.getItem("isLoggedIn") === "true";
+  });
 
   useEffect(() => {
     console.log(isLoggedIn);
+    // Store the login state in local storage whenever it changes
+    localStorage.setItem("isLoggedIn", isLoggedIn);
   }, [isLoggedIn]);
 
   return (

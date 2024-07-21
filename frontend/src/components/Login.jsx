@@ -32,6 +32,7 @@ function Login() {
         if (response.status === 400) {
           setError(data.error);
         } else if (response.status === 201) {
+          localStorage.setItem("isLoggedIn", "true");
           setLogin(true);
           navigate("/cart");
         } else {
