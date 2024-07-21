@@ -1,9 +1,5 @@
 import { createContext, useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import Navbar from "./components/Navbar.jsx";
-import Carousel from "./components/Carousel.jsx";
-import Features from "./components/Features.jsx";
-import Grid from "./components/Grid.jsx";
 import Login from "./components/Login.jsx";
 import Register from "./components/Register.jsx";
 import Home from "./components/Home.jsx";

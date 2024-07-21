@@ -10,6 +10,9 @@ module.exports = {
         4: "#6C757D",
         5: "#212529",
       },
+      fontFamily:{
+        kameron : ['Kameron','sans-serif']
+      },
     },
   },
   plugins: [],
