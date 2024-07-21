@@ -52,8 +52,6 @@ Vendora is a basic e-commerce website designed to provide a simple online shoppi
 
 ## Getting Started
 
-Provide instructions on how to set up and run the project locally.
-
 ### Prerequisites
 Installations of the following-
 - Node.js
